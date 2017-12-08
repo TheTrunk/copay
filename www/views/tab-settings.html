@@ -43,7 +43,7 @@
         <i class="icon big-icon-svg">
           <img src="img/icon-bch.svg" class="bg bch bch-enabled"/>
         </i>
-        <span class="setting-title">Bitcoin Cash</span>
+        <span class="setting-title">Hush Cash</span>
         <i class="icon bp-arrow-right"></i>
       </a>
 
@@ -80,7 +80,7 @@
         <i class="icon big-icon-svg">
           <img src="img/icon-network.svg" class="bg"/>
         </i>
-        <span class="setting-title">{{'Bitcoin Network Fee Policy' | translate}}</span>
+        <span class="setting-title">{{'Hush Network Fee Policy' | translate}}</span>
         <span class="setting-value">
           {{feeOpts[currentFeeLevel]|translate}}
         </span>
@@ -97,15 +97,15 @@
         <i class="icon bp-arrow-right"></i>
       </a>
 
-      <div class="item item-divider" ng-show="walletsBtc[0]">{{'Bitcoin Wallets' | translate}}</div>
+      <div class="item item-divider" ng-show="walletsHUSH[0]">{{'Hush Wallets' | translate}}</div>
 
       <a class="item item-icon-left item-icon-right" href
            ui-sref="tabs.preferences({'walletId': wallet.id})"
-           ng-repeat="wallet in walletsBtc track by $index">
+           ng-repeat="wallet in walletsHUSH track by $index">
         <span ng-include="'views/includes/walletListSettings.html'"></span>
       </a>
 
-      <div class="item item-divider" ng-show="walletsBch[0]">{{'Bitcoin Cash Wallets' | translate}}</div>
+      <div class="item item-divider" ng-show="walletsBch[0]">{{'Hush Cash Wallets' | translate}}</div>
 
       <a class="item item-icon-left item-icon-right" href
            ui-sref="tabs.preferences({'walletId': wallet.id})"

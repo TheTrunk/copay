@@ -1,17 +1,17 @@
-<action-sheet action-sheet-show="show" class="wallet-selector" ng-init="walletsBtc = []; walletsBch = []">
+<action-sheet action-sheet-show="show" class="wallet-selector" ng-init="walletsHUSH = []; walletsBch = []">
   <img class="back-arrow" src="img/icon-back-arrow.svg" ng-click="hide()">
 
   <span ng-repeat="wallet in wallets track by $index"
-    ng-init="wallet.coin == 'btc' ? walletsBtc.push(wallet) : walletsBch.push(wallet)"></span>
+    ng-init="wallet.coin == 'HUSH' ? walletsHUSH.push(wallet) : walletsBch.push(wallet)"></span>
 
-  <div class="header" ng-show="!walletsBtc[0] || !walletsBch[0]">{{title}}</div>
+  <div class="header" ng-show="!walletsHUSH[0] || !walletsBch[0]">{{title}}</div>
 
-  <div class="subheader" ng-if="walletsBtc[0] && walletsBch[0]">
-    <img class="wallet-coin-logo" src="img/icon-bitcoin.svg" width="18">
-    <span translate>Bitcoin Wallets</span>
+  <div class="subheader" ng-if="walletsHUSH[0] && walletsBch[0]">
+    <img class="wallet-coin-logo" src="img/icon-Hush.svg" width="18">
+    <span translate>Hush Wallets</span>
   </div>
   <a
-    ng-repeat="wallet in walletsBtc track by $index"
+    ng-repeat="wallet in walletsHUSH track by $index"
     class="item item-icon-left item-big-icon-left item-icon-right wallet"
     ng-click="selectWallet(wallet)"
   >
@@ -37,9 +37,9 @@
       </div>
     </a>
 
-  <div class="subheader" ng-if="walletsBch[0] && walletsBtc[0]">
-    <img class="wallet-coin-logo" src="img/bitcoin-cash-logo.svg" width="22">
-    <span translate>Bitcoin Cash Wallets</span>
+  <div class="subheader" ng-if="walletsBch[0] && walletsHUSH[0]">
+    <img class="wallet-coin-logo" src="img/Hush-cash-logo.svg" width="22">
+    <span translate>Hush Cash Wallets</span>
   </div>
   <a
     ng-repeat="wallet in walletsBch track by $index"

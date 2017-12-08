@@ -30,7 +30,7 @@
         <div class="item" ng-hide="criticalError">
           <span class="label" translate>To</span>
           <span class="payment-proposal-to" ng-if="!recipientType">
-            <img src="img/icon-bitcoin-small.svg">
+            <img src="img/icon-Hush-small.svg">
 
             <div copy-to-clipboard="tx.toAddress" ng-if="!tx.paypro" class="ellipsis">
               <contact ng-if="tx.toAddress && !tx.toName" address="{{tx.toAddress}}"></contact>
@@ -88,7 +88,7 @@
               </span>
             </span>
 
-          <i ng-if="wallet.coin == 'btc'" class="icon bp-arrow-right"></i>
+          <i ng-if="wallet.coin == 'HUSH'" class="icon bp-arrow-right"></i>
         </div>
         <a class="item item-icon-right" ng-if="wallet" ng-click="showDescriptionPopup(tx)">
           <span class="label" translate>Add Memo</span>

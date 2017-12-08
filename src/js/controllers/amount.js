@@ -5,7 +5,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
   var unitToSatoshi;
   var satToUnit;
   var unitDecimals;
-  var satToBtc;
+  var satToHUSH;
   var SMALL_FONT_SIZE_LIMIT = 10;
   var LENGTH_EXPRESSION_LIMIT = 19;
   var isNW = platformInfo.isNW;
@@ -30,15 +30,15 @@ angular.module('copayApp.controllers').controller('amountController', function($
 
       availableUnits = [];
 
-      var hasBTCWallets = profileService.getWallets({
-        coin: 'btc'
+      var hasHUSHWallets = profileService.getWallets({
+        coin: 'HUSH'
       }).length;
 
-      if (hasBTCWallets) {
+      if (hasHUSHWallets) {
         availableUnits.push({
-          name: 'Bitcoin',
-          id: 'btc',
-          shortName: 'BTC',
+          name: 'Hush',
+          id: 'HUSH',
+          shortName: 'HUSH',
         });
       }
 
@@ -51,7 +51,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
 
       if (hasBCHWallets) {
         availableUnits.push({
-          name: 'Bitcoin Cash',
+          name: 'Hush Cash',
           id: 'bch',
           shortName: 'BCH',
         });
@@ -152,7 +152,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
     $scope.isCordova = platformInfo.isCordova;
     unitToSatoshi = config.unitToSatoshi;
     satToUnit = 1 / unitToSatoshi;
-    satToBtc = 1 / 100000000;
+    satToHUSH = 1 / 100000000;
     unitDecimals = config.unitDecimals;
 
     $scope.resetAmount();
@@ -217,7 +217,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
 
 
     if (availableUnits[unitIndex].isFiat) {
-      // Always return to BTC... TODO?
+      // Always return to HUSH... TODO?
       altUnitIndex = 0;
     } else {
       altUnitIndex = lodash.findIndex(availableUnits, {

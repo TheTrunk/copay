@@ -178,12 +178,12 @@ msgid "All Addresses"
 msgstr "Wszystkie adresy"
 
 #: www/views/modals/wallet-balance.html:18
-msgid "All of your bitcoin wallet balance may not be available for immediate spending."
-msgstr "Wszystkie salda portfela bitcoin mogą nie być dostępne do natychmiastowego wydania."
+msgid "All of your Hush wallet balance may not be available for immediate spending."
+msgstr "Wszystkie salda portfela Hush mogą nie być dostępne do natychmiastowego wydania."
 
 #: www/views/tab-receive.html:25
-msgid "All signing devices must be added to this multisig wallet before bitcoin addresses can be created."
-msgstr "Wszystkie podpisane urządzenia muszą zostać dodane do tego portfela przed utworzeniem adresów bitcoin."
+msgid "All signing devices must be added to this multisig wallet before Hush addresses can be created."
+msgstr "Wszystkie podpisane urządzenia muszą zostać dodane do tego portfela przed utworzeniem adresów Hush."
 
 #: www/views/tab-scan.html:21
 msgid "Allow Camera Access"
@@ -229,20 +229,20 @@ msgid "An update to this app is available. For your security, please update to t
 msgstr "Dostępna jest aktualizacja aplikacji. Ze względów bezpieczeństwa należy zaktualizować do najnowszej wersji."
 
 #: www/views/backupWarning.html:14
-msgid "Anyone with your backup phrase can access or spend your bitcoin."
-msgstr "Każdy, kto ma Twoją kluczową frazę może uzyskać dostęp lub wydać Twoje bitcoiny."
+msgid "Anyone with your backup phrase can access or spend your Hush."
+msgstr "Każdy, kto ma Twoją kluczową frazę może uzyskać dostęp lub wydać Twoje Hushy."
 
 #: www/views/addresses.html:94
-msgid "Approximate Bitcoin network fee to transfer wallet's balance (with normal priority)"
-msgstr "Szacunkowe opłaty sieci Bitcoin do przeniesienia salda portfela (normalny priorytet)"
+msgid "Approximate Hush network fee to transfer wallet's balance (with normal priority)"
+msgstr "Szacunkowe opłaty sieci Hush do przeniesienia salda portfela (normalny priorytet)"
 
 #: www/views/backupWarning.html:10
 msgid "Are you being watched?"
 msgstr "Czy jesteś obserwowany?"
 
 #: src/js/controllers/preferencesExternal.js:15
-msgid "Are you being watched? Anyone with your recovery phrase can access or spend your bitcoin."
-msgstr "Czy jesteś obserwowany? Każdy, kto zdobędzie twoją kluczową frazę może uzyskać dostęp do portfela i wydać twoje bitcoiny."
+msgid "Are you being watched? Anyone with your recovery phrase can access or spend your Hush."
+msgstr "Czy jesteś obserwowany? Każdy, kto zdobędzie twoją kluczową frazę może uzyskać dostęp do portfela i wydać twoje Hushy."
 
 #: src/js/controllers/copayers.js:56
 msgid "Are you sure you want to cancel and delete this wallet?"
@@ -302,8 +302,8 @@ msgid "BIP32 path for address derivation"
 msgstr "BIP32 ścieżka dla adresu derywacji"
 
 #: www/views/preferencesCash.html:25
-msgid "BTC wallets"
-msgstr "Portfele BTC"
+msgid "HUSH wallets"
+msgstr "Portfele HUSH"
 
 #: www/views/preferences.html:34
 msgid "Backup"
@@ -354,46 +354,46 @@ msgstr "Karty BitPay Visa&reg;"
 
 #: www/views/addressbook.add.html:38
 #: www/views/includes/incomingDataMenu.html:29
-msgid "Bitcoin Address"
-msgstr "Adres bitcoin"
+msgid "Hush Address"
+msgstr "Adres Hush"
 
 #: www/views/includes/walletSelector.html:42
 #: www/views/tab-home.html:112
 #: www/views/tab-settings.html:108
-msgid "Bitcoin Cash Wallets"
-msgstr "Płatność Bitcoin Cash"
+msgid "Hush Cash Wallets"
+msgstr "Płatność Hush Cash"
 
 #: www/views/modals/chooseFeeLevel.html:4
 #: www/views/preferencesFee.html:4
 #: www/views/tab-settings.html:83
-msgid "Bitcoin Network Fee Policy"
-msgstr "Polityka prowizji sieci bitcoin"
+msgid "Hush Network Fee Policy"
+msgstr "Polityka prowizji sieci Hush"
 
 #: www/views/includes/walletSelector.html:11
 #: www/views/tab-home.html:97
 #: www/views/tab-settings.html:100
-msgid "Bitcoin Wallets"
-msgstr "Portfele Bitcoin"
+msgid "Hush Wallets"
+msgstr "Portfele Hush"
 
 #: src/js/services/incomingData.js:151
-msgid "Bitcoin cash Payment"
-msgstr "Płatność Bitcoin Cash"
+msgid "Hush cash Payment"
+msgstr "Płatność Hush Cash"
 
 #: www/views/onboarding/tour.html:31
-msgid "Bitcoin is a currency."
-msgstr "Bitcoin jest walutą."
+msgid "Hush is a currency."
+msgstr "Hush jest walutą."
 
 #: www/views/onboarding/disclaimer.html:15
-msgid "Bitcoin is different &ndash; it cannot be safely held with a bank or web service."
-msgstr "Bitcoin jest inny &ndash; nie może być bezpiecznie przechowywany w banku lub usłudze internetowej."
+msgid "Hush is different &ndash; it cannot be safely held with a bank or web service."
+msgstr "Hush jest inny &ndash; nie może być bezpiecznie przechowywany w banku lub usłudze internetowej."
 
 #: www/views/onboarding/tour.html:18
-msgid "Bitcoin is secure,<br>digital money."
-msgstr "Bitcoin jest bezpieczny, <br>cyfrowe pieniądze."
+msgid "Hush is secure,<br>digital money."
+msgstr "Hush jest bezpieczny, <br>cyfrowe pieniądze."
 
 #: www/views/preferencesFee.html:11
-msgid "Bitcoin transactions include a fee collected by miners on the network."
-msgstr "Transakcje Bitcoin obejmują prowizję pobieraną przez górników w sieci."
+msgid "Hush transactions include a fee collected by miners on the network."
+msgstr "Transakcje Hush obejmują prowizję pobieraną przez górników w sieci."
 
 #: www/views/buyAmazon.html:108
 msgid "Bought {{amountUnitStr}}"
@@ -422,12 +422,12 @@ msgid "Buy"
 msgstr "Kup"
 
 #: www/views/includes/buyAndSellCard.html:3
-msgid "Buy &amp; Sell Bitcoin"
-msgstr "Kup &amp; sprzedaj bitcoiny"
+msgid "Buy &amp; Sell Hush"
+msgstr "Kup &amp; sprzedaj Hushy"
 
 #: www/views/tab-send.html:40
-msgid "Buy Bitcoin"
-msgstr "Kup bitcoiny"
+msgid "Buy Hush"
+msgstr "Kup Hushy"
 
 #: www/views/mercadoLibre.html:22
 #: www/views/mercadoLibre.html:50
@@ -439,8 +439,8 @@ msgid "Buy from"
 msgstr "Kup od"
 
 #: src/js/services/onGoingProcess.js:40
-msgid "Buying Bitcoin..."
-msgstr "Zakup bitcoinów..."
+msgid "Buying Hush..."
+msgstr "Zakup Hushów..."
 
 #: src/js/services/onGoingProcess.js:12
 msgid "Calculating fee"
@@ -621,8 +621,8 @@ msgid "Contribute Translations"
 msgstr "Wkład do tłumaczenia"
 
 #: src/js/controllers/confirm.js:130
-msgid "Copay only supports Bitcoin Cash using new version numbers addresses"
-msgstr "Copay obsługuje tylko Bitcoin gotówki za pomocą nowej wersji numery adresy"
+msgid "Copay only supports Hush Cash using new version numbers addresses"
+msgstr "Copay obsługuje tylko Hush gotówki za pomocą nowej wersji numery adresy"
 
 #: src/js/services/bwcError.js:62
 msgid "Copayer already in this wallet"
@@ -813,8 +813,8 @@ msgstr "Utwórz współdzielony portfel"
 #: www/views/onboarding/tour.html:51
 #: www/views/tab-home.html:89
 #: www/views/tab-send.html:41
-msgid "Create bitcoin wallet"
-msgstr "Utwórz portfel bitcoin"
+msgid "Create Hush wallet"
+msgstr "Utwórz portfel Hush"
 
 #: www/views/tab-create-personal.html:131
 msgid "Create new wallet"
@@ -939,8 +939,8 @@ msgid "Duplicating wallet..."
 msgstr "Duplikowanie portfela..."
 
 #: www/views/addresses.html:19
-msgid "Each bitcoin wallet can generate billions of addresses from your 12-word backup. A new address is automatically generated and shown each time you receive a payment."
-msgstr "Każdy portfel bitcoin może wygenerować miliardy adresów z twojej 12-wyrazowej kopii zapasowej. Nowy adres jest automatycznie generowany i pokazany za każdym razem, kiedy otrzymasz płatność."
+msgid "Each Hush wallet can generate billions of addresses from your 12-word backup. A new address is automatically generated and shown each time you receive a payment."
+msgstr "Każdy portfel Hush może wygenerować miliardy adresów z twojej 12-wyrazowej kopii zapasowej. Nowy adres jest automatycznie generowany i pokazany za każdym razem, kiedy otrzymasz płatność."
 
 #: src/js/services/feeService.js:13
 msgid "Economy"
@@ -1394,8 +1394,8 @@ msgstr "Portfel sprzętowy"
 
 #: src/js/controllers/create.js:178
 #: src/js/controllers/join.js:144
-msgid "Hardware wallets are not yet supported with Bitcoin Cash"
-msgstr "Portfele sprzętowe nie są jeszcze obsługiwane z Bitcoin gotówki"
+msgid "Hardware wallets are not yet supported with Hush Cash"
+msgstr "Portfele sprzętowe nie są jeszcze obsługiwane z Hush gotówki"
 
 #: www/views/modals/mercadolibre-card-details.html:69
 #: www/views/tab-settings.html:20
@@ -1476,8 +1476,8 @@ msgid "I understand"
 msgstr "Rozumiem"
 
 #: www/views/onboarding/disclaimer.html:21
-msgid "I understand that if this app is moved to another device or deleted, my bitcoin can only be recovered with the backup phrase."
-msgstr "Rozumiem, że jeśli aplikacja zostanie przeniesiona na inne urządzenie, lub usunięta moje bitcoiny mogą zostać odzyskane tylko przy użyciu kluczowej frazy."
+msgid "I understand that if this app is moved to another device or deleted, my Hush can only be recovered with the backup phrase."
+msgstr "Rozumiem, że jeśli aplikacja zostanie przeniesiona na inne urządzenie, lub usunięta moje Hushy mogą zostać odzyskane tylko przy użyciu kluczowej frazy."
 
 #: www/views/onboarding/disclaimer.html:18
 msgid "I understand that my funds are held securely on this device, not by a company."
@@ -1634,8 +1634,8 @@ msgid "Is this email address correct?"
 msgstr "Czy ten adres e-mail jest poprawny?"
 
 #: www/views/addresses.html:25
-msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your bitcoins secure against hypothetical attacks by quantum computers."
-msgstr "To dobry pomysł, aby uniknąć ponownego wykorzystywania adresów - to chroni Twoją prywatność i zabezpiecza Twoje bitcoiny przed hipotetycznymi atakami przez komputery kwantowe."
+msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your Hushs secure against hypothetical attacks by quantum computers."
+msgstr "To dobry pomysł, aby uniknąć ponownego wykorzystywania adresów - to chroni Twoją prywatność i zabezpiecza Twoje Hushy przed hipotetycznymi atakami przez komputery kwantowe."
 
 #: src/js/controllers/backup.js:76
 msgid "It's important that you write your backup phrase down correctly. If something happens to your wallet, you'll need this backup to recover your money. Please review your backup and try again."
@@ -1850,8 +1850,8 @@ msgid "No access key defined"
 msgstr "Klucz dostępu nie jest zdefiniowany"
 
 #: www/views/onboarding/backupRequest.html:5
-msgid "No backup, no bitcoin."
-msgstr "Nie ma kopii zapasowej - nie ma bitcoinów."
+msgid "No backup, no Hush."
+msgstr "Nie ma kopii zapasowej - nie ma Hushów."
 
 #: www/views/addressbook.html:19
 msgid "No contacts yet"
@@ -1907,15 +1907,15 @@ msgid "No wallets available to receive funds"
 msgstr "Brak portfeli do otrzymania środków"
 
 #: www/views/preferencesCash.html:15
-msgid "No wallets eligible for Bitcoin Cash support"
-msgstr "Brak portfeli wspierających Bitcoin Cash"
+msgid "No wallets eligible for Hush Cash support"
+msgstr "Brak portfeli wspierających Hush Cash"
 
 #: src/js/controllers/preferencesCash.js:58
 msgid "Non BIP44 wallet"
 msgstr "Nie BIP44 portfel"
 
 #: www/views/preferencesCash.html:46
-msgid "Non eligible BTC wallets"
+msgid "Non eligible HUSH wallets"
 msgstr ""
 
 #: src/js/services/feeService.js:12
@@ -1948,12 +1948,12 @@ msgid "Note"
 msgstr "Notatka"
 
 #: www/views/backup.html:19
-msgid "Note: if this BCH wallet was duplicated from a BTC wallet, they share the same recovery phrase."
-msgstr "Uwaga: Jeśli ten portfel BCH został zduplikowany z portfela BTC, będą one współdzielić ten sam zwrot odzyskiwania."
+msgid "Note: if this BCH wallet was duplicated from a HUSH wallet, they share the same recovery phrase."
+msgstr "Uwaga: Jeśli ten portfel BCH został zduplikowany z portfela HUSH, będą one współdzielić ten sam zwrot odzyskiwania."
 
 #: www/views/modals/wallets.html:25
-msgid "Notice: only 1-1 (single signature) wallets can be used for sell bitcoin"
-msgstr "Uwaga: tylko 1-1 portfela (pojedynczy podpis) może być wykorzystywany do sprzedaży bitcoinów"
+msgid "Notice: only 1-1 (single signature) wallets can be used for sell Hush"
+msgstr "Uwaga: tylko 1-1 portfela (pojedynczy podpis) może być wykorzystywany do sprzedaży Hushów"
 
 #: www/views/preferencesNotifications.html:3
 #: www/views/tab-settings.html:54
@@ -2092,8 +2092,8 @@ msgid "Paste the backup plain text code"
 msgstr "Wklej tekst kodu kopii zapasowej"
 
 #: www/views/bitpayCardIntro.html:28
-msgid "Pay 0% fees to turn bitcoin into dollars."
-msgstr "Zapłać 0% prowizji za wymianę bitcoinów na dolary."
+msgid "Pay 0% fees to turn Hush into dollars."
+msgstr "Zapłać 0% prowizji za wymianę Hushów na dolary."
 
 #: www/views/modals/paypro.html:18
 msgid "Pay To"
@@ -2153,8 +2153,8 @@ msgid "Payment accepted. It will be broadcasted by Glidera. In case there is a p
 msgstr "Wypłata zaakceptowana. Będzie nadana przez Glidera. W przypadku wystąpienia problemu, może być usunięta 6 godzin po utworzeniu."
 
 #: src/js/services/incomingData.js:152
-msgid "Payment address was translated to new Bitcoin Cash address format:"
-msgstr "Adres płatności został przetłumaczony na nowy format adresów Bitcoin Cash:"
+msgid "Payment address was translated to new Hush Cash address format:"
+msgstr "Adres płatności został przetłumaczony na nowy format adresów Hush Cash:"
 
 #: www/views/modals/txp-details.html:107
 msgid "Payment details"
@@ -2507,8 +2507,8 @@ msgid "Search Transactions"
 msgstr "Szukaj transakcji"
 
 #: www/views/tab-send.html:18
-msgid "Search or enter bitcoin address"
-msgstr "Wyszukaj lub wpisz adres bitcoin"
+msgid "Search or enter Hush address"
+msgstr "Wyszukaj lub wpisz adres Hush"
 
 #: www/views/modals/search.html:16
 msgid "Search transactions"
@@ -2539,8 +2539,8 @@ msgid "Self-signed Certificate"
 msgstr "Certyfikat z podpisem własnym"
 
 #: src/js/services/onGoingProcess.js:41
-msgid "Selling Bitcoin..."
-msgstr "Sprzedawanie bitcoinów..."
+msgid "Selling Hush..."
+msgstr "Sprzedawanie Hushów..."
 
 #: www/views/feedback/send.html:13
 #: www/views/feedback/send.html:43
@@ -2692,8 +2692,8 @@ msgid "Show advanced options"
 msgstr "Pokaż opcje zaawansowane"
 
 #: www/views/tab-send.html:42
-msgid "Show bitcoin address"
-msgstr "Pokaż adres bitcoin"
+msgid "Show Hush address"
+msgstr "Pokaż adres Hush"
 
 #: www/views/tab-send.html:64
 msgid "Show more"
@@ -2740,7 +2740,7 @@ msgid "Slide to send"
 msgstr "Przesuń, aby wysłać"
 
 #: www/views/preferencesCash.html:56
-msgid "Some of your wallets are not eligible for Bitcoin Cash support. You can try to access BCH funds from these wallets using the"
+msgid "Some of your wallets are not eligible for Hush Cash support. You can try to access BCH funds from these wallets using the"
 msgstr ""
 
 #: src/js/controllers/create.js:86
@@ -2761,12 +2761,12 @@ msgid "Spending Password needed"
 msgstr "Wymagane hasło wypłat"
 
 #: www/views/walletDetails.html:173
-msgid "Spending this balance will need significant Bitcoin network fees"
+msgid "Spending this balance will need significant Hush network fees"
 msgstr ""
 
 #: www/views/tab-send.html:33
-msgid "Start sending bitcoin"
-msgstr "Zacznij wysyłać bitcoiny"
+msgid "Start sending Hush"
+msgstr "Zacznij wysyłać Hushy"
 
 #: www/views/lockSetup.html:3
 msgid "Startup Lock"
@@ -2803,8 +2803,8 @@ msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "TEJ CZYNNOŚCI NIE MOŻNA COFNĄĆ"
 
 #: www/views/onboarding/welcome.html:5
-msgid "Take control of your money,<br>get started with bitcoin."
-msgstr "Przejmij kontrolę nad swoimi pieniędzmi,<br>zacznij korzystać z bitcoinów."
+msgid "Take control of your money,<br>get started with Hush."
+msgstr "Przejmij kontrolę nad swoimi pieniędzmi,<br>zacznij korzystać z Hushów."
 
 #: www/views/walletDetails.html:132
 #: www/views/walletDetails.html:52
@@ -2859,16 +2859,16 @@ msgid "The Ledger Chrome application is not installed"
 msgstr "Aplikacja Ledger Chrome nie jest zainstalowana"
 
 #: www/views/modals/wallet-balance.html:55
-msgid "The amount of bitcoin immediately spendable from this wallet."
+msgid "The amount of Hush immediately spendable from this wallet."
 msgstr "Możliwa jest natychmiastowa wypłata wszystkich środków z tego portfela."
 
 #: www/views/modals/wallet-balance.html:93
-msgid "The amount of bitcoin stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
-msgstr "Kwota bitcoinów przechowywana w tym portfelu, przydzielona jako wejście dla oczekujących wniosków wypłat. Kwota ta jest ustalana za pomocą niewykorzystanych wyjść transakcji związanych z tym portfelem i może przekroczyć kwoty związane z proponowanymi wnioskami wypłat."
+msgid "The amount of Hush stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
+msgstr "Kwota Hushów przechowywana w tym portfelu, przydzielona jako wejście dla oczekujących wniosków wypłat. Kwota ta jest ustalana za pomocą niewykorzystanych wyjść transakcji związanych z tym portfelem i może przekroczyć kwoty związane z proponowanymi wnioskami wypłat."
 
 #: www/views/modals/wallet-balance.html:74
-msgid "The amount of bitcoin stored in this wallet with less than 1 blockchain confirmation."
-msgstr "Ilość bitcoinów przechowywana w tym portfel z mniej niż jednym potwierdzeniem w blockchainie."
+msgid "The amount of Hush stored in this wallet with less than 1 blockchain confirmation."
+msgstr "Ilość Hushów przechowywana w tym portfel z mniej niż jednym potwierdzeniem w blockchainie."
 
 #: www/views/tab-import-phrase.html:5
 msgid "The derivation path"
@@ -2922,8 +2922,8 @@ msgid "The spend proposal is not pending"
 msgstr "Wniosek o wypłatę nie jest w oczekujących"
 
 #: www/views/modals/wallet-balance.html:36
-msgid "The total amount of bitcoin stored in this wallet."
-msgstr "Łączna ilość bitcoinów przechowywana w tym portfelu."
+msgid "The total amount of Hush stored in this wallet."
+msgstr "Łączna ilość Hushów przechowywana w tym portfelu."
 
 #: www/views/preferencesHistory.html:27
 msgid "The transaction history and every new incoming transaction are cached in the app. This feature clean this up and synchronizes again from the server"
@@ -2953,11 +2953,11 @@ msgid "This app is fantastic!"
 msgstr "Ta aplikacja jest fantastyczna!"
 
 #: www/views/onboarding/tour.html:47
-msgid "This app stores your bitcoin with cutting-edge security."
-msgstr "Ta aplikacja przechowuje Twoje bitcoiny z zaawansowanymi zabezpieczeniami."
+msgid "This app stores your Hush with cutting-edge security."
+msgstr "Ta aplikacja przechowuje Twoje Hushy z zaawansowanymi zabezpieczeniami."
 
 #: src/js/controllers/confirm.js:523
-msgid "This bitcoin payment request has expired."
+msgid "This Hush payment request has expired."
 msgstr "Ten wniosek płatności wygasł."
 
 #: www/views/join.html:133
@@ -2971,7 +2971,7 @@ msgid "This recovery phrase was created with a password. To recover this wallet 
 msgstr "Ta kluczowa fraza został utworzona przy użyciu hasła. Aby odzyskać portfel potrzebna jest kluczowa fraza i hasło."
 
 #: www/views/tx-details.html:91
-msgid "This transaction amount is too small compared to current Bitcoin network fees. Spending these funds will need a Bitcoin network fee cost comparable to the funds itself."
+msgid "This transaction amount is too small compared to current Hush network fees. Spending these funds will need a Hush network fee cost comparable to the funds itself."
 msgstr ""
 
 #: www/views/tx-details.html:87
@@ -2998,12 +2998,12 @@ msgid "To"
 msgstr "Do"
 
 #: www/views/tab-send.html:37
-msgid "To get started, buy bitcoin or share your address. You can receive bitcoin from any wallet or service."
-msgstr "Aby zacząć, kup bitcoiny lub udostępnij swój adres. Możesz otrzymać bitcoiny z dowolnego portfela lub usługi."
+msgid "To get started, buy Hush or share your address. You can receive Hush from any wallet or service."
+msgstr "Aby zacząć, kup Hushy lub udostępnij swój adres. Możesz otrzymać Hushy z dowolnego portfela lub usługi."
 
 #: www/views/tab-send.html:38
-msgid "To get started, you'll need to create a bitcoin wallet and get some bitcoin."
-msgstr "Aby rozpocząć należy utworzyć portfel i dostać trochę bitcoinów."
+msgid "To get started, you'll need to create a Hush wallet and get some Hush."
+msgstr "Aby rozpocząć należy utworzyć portfel i dostać trochę Hushów."
 
 #: src/js/services/bitpayAccountService.js:73
 msgid "To {{reason}} you must first add your BitPay account - {{email}}"
@@ -3094,8 +3094,8 @@ msgid "Try again in {{expires}}"
 msgstr "Spróbuj ponownie w {{expires}}"
 
 #: www/views/bitpayCardIntro.html:18
-msgid "Turn bitcoin into dollars, swipe anywhere Visa<sup>&reg;</sup> is accepted."
-msgstr "Zamień bitcoiny na dolary - płać wszędzie gdzie akceptowane są karty Visa <sup>&reg;</sup>."
+msgid "Turn Hush into dollars, swipe anywhere Visa<sup>&reg;</sup> is accepted."
+msgstr "Zamień Hushy na dolary - płać wszędzie gdzie akceptowane są karty Visa <sup>&reg;</sup>."
 
 #: www/views/tab-import-phrase.html:17
 msgid "Type the Recovery Phrase (usually 12 words)"
@@ -3204,7 +3204,7 @@ msgid "WARNING: UNTRUSTED CERTIFICATE"
 msgstr "OSTRZEŻENIE: CERTYFIKAT NIEZAUFANY"
 
 #: www/views/preferencesPrivateKey.html:14
-msgid "WARNING: Your extended private keys are all that is needed to access your bitcoin funds. Be sure to protect your private keys and store them only on secure devices. BitPay does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
+msgid "WARNING: Your extended private keys are all that is needed to access your Hush funds. Be sure to protect your private keys and store them only on secure devices. BitPay does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr ""
 
 #: src/js/services/onGoingProcess.js:15
@@ -3457,16 +3457,16 @@ msgid "You can make contributions by signing up on our Crowdin community transla
 msgstr "Możesz przyczynić się do rozwoju aplikacji rejestrując się na Crowdin - naszej stronie dla tłumaczy. Będziemy wdzięczni za kontakt!"
 
 #: www/views/tab-scan.html:16
-msgid "You can scan bitcoin addresses, payment requests, paper wallets, and more."
-msgstr "Możesz zeskanować adresy bitcoin, wnioski płatności, portfele papierowe i wiele innych."
+msgid "You can scan Hush addresses, payment requests, paper wallets, and more."
+msgstr "Możesz zeskanować adresy Hush, wnioski płatności, portfele papierowe i wiele innych."
 
 #: src/js/controllers/preferencesAbout.js:14
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "Możesz zobaczyć postępy prac i przyczynić się do rozwoju tej aplikacji open source odwiedzając nasz projekt na GitHub."
 
 #: www/views/onboarding/tour.html:19
-msgid "You can spend bitcoin at millions of websites and stores worldwide."
-msgstr "Bitcoiny możesz wydać w milionach sklepów i stron internetowych na całym świecie."
+msgid "You can spend Hush at millions of websites and stores worldwide."
+msgstr "Hushy możesz wydać w milionach sklepów i stron internetowych na całym świecie."
 
 #: www/views/backup.html:15
 msgid "You can still export it from Advanced &gt; Export."
@@ -3477,8 +3477,8 @@ msgid "You can trade it for other currencies like US Dollars, Euros, or Pounds."
 msgstr "Możesz je wymienić na inne waluty, takie jak dolary amerykańskie, euro lub funty."
 
 #: www/views/onboarding/tour.html:46
-msgid "You control your bitcoin."
-msgstr "Ty kontrolujesz swoje bitcoiny."
+msgid "You control your Hush."
+msgstr "Ty kontrolujesz swoje Hushy."
 
 #: www/views/modals/chooseFeeLevel.html:64
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
@@ -3502,11 +3502,11 @@ msgid "Your Gift Cards"
 msgstr "Twoje karty podarunkowe"
 
 #: www/views/includes/confirmBackupPopup.html:6
-msgid "Your bitcoin wallet is backed up!"
+msgid "Your Hush wallet is backed up!"
 msgstr "Kopia zapasowa portfela została utworzona!"
 
 #: www/views/tab-home.html:50
-msgid "Your bitcoin wallet is ready!"
+msgid "Your Hush wallet is ready!"
 msgstr "Twój portfel jest gotowy!"
 
 #: www/views/modals/chooseFeeLevel.html:61
@@ -3598,8 +3598,8 @@ msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain inform
 msgstr "{{appName}} jest zależny od Bitcore Wallet Service (BWS) jeśli chodzi o informacje dotyczące blokcheina, sieci i synchronizacji współwłaścicieli portfela. Domyślnie jest to https://bws.bitpay.com (BitPay's public BWS instance)."
 
 #: src/js/controllers/confirm.js:408
-msgid "{{fee}} will be deducted for bitcoin networking fees."
-msgstr "{{fee}} zostanie potrącone jako prowizja sieci bitcoin."
+msgid "{{fee}} will be deducted for Hush networking fees."
+msgstr "{{fee}} zostanie potrącone jako prowizja sieci Hush."
 
 #: www/views/confirm.html:85
 msgid "{{tx.txp[wallet.id].feeRatePerStr}}  of the sending amount"

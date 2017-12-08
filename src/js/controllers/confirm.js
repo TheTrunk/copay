@@ -127,7 +127,7 @@ angular.module('copayApp.controllers').controller('confirmController', function(
     try {
       networkName = (new B.Address(data.stateParams.toAddress)).network.name;
     } catch(e) {
-      var message = gettextCatalog.getString('Copay only supports Bitcoin Cash using new version numbers addresses');
+      var message = gettextCatalog.getString('Copay only supports Hush Cash using new version numbers addresses');
       var backText = gettextCatalog.getString('Go back');
       var learnText = gettextCatalog.getString('Learn more');
       popupService.showConfirm(null, message, backText, learnText, function(back) {
@@ -405,7 +405,7 @@ angular.module('copayApp.controllers').controller('confirmController', function(
       return warningMsg.join('\n');
     };
 
-    var msg = gettextCatalog.getString("{{fee}} will be deducted for bitcoin networking fees.", {
+    var msg = gettextCatalog.getString("{{fee}} will be deducted for Hush networking fees.", {
       fee: txFormatService.formatAmountStr(wallet.coin, sendMaxInfo.fee)
     });
     var warningMsg = verifyExcludedUtxos();
@@ -520,7 +520,7 @@ angular.module('copayApp.controllers').controller('confirmController', function(
     if (!tx || !wallet) return;
 
     if ($scope.paymentExpired) {
-      popupService.showAlert(null, gettextCatalog.getString('This bitcoin payment request has expired.'));
+      popupService.showAlert(null, gettextCatalog.getString('This Hush payment request has expired.'));
       $scope.sendStatus = '';
       $timeout(function() {
         $scope.$apply();

@@ -5,18 +5,18 @@ angular.module('copayApp.controllers').controller('paymentUriController',
       return (parseFloat(number.toPrecision(12)));
     };
 
-    // Build bitcoinURI with querystring
+    // Build HushURI with querystring
     this.init = function() {
       var query = [];
-      this.bitcoinURI = $stateParams.url;
+      this.HushURI = $stateParams.url;
 
       var URI = bitcore.URI;
-      var isUriValid = URI.isValid(this.bitcoinURI);
-      if (!URI.isValid(this.bitcoinURI)) {
+      var isUriValid = URI.isValid(this.HushURI);
+      if (!URI.isValid(this.HushURI)) {
         this.error = true;
         return;
       }
-      var uri = new URI(this.bitcoinURI);
+      var uri = new URI(this.HushURI);
 
       if (uri && uri.address) {
         var config = configService.getSync().wallet.settings;
@@ -50,7 +50,7 @@ angular.module('copayApp.controllers').controller('paymentUriController',
       $ionicHistory.removeBackView();
       $state.go('tabs.home');
       $timeout(function() {
-        $rootScope.$emit('paymentUri', self.bitcoinURI);
+        $rootScope.$emit('paymentUri', self.HushURI);
       }, 1000);
     };
   });

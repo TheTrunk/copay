@@ -15,7 +15,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
     $scope.hasWallets = lodash.isEmpty($scope.wallets) ? false : true;
   };
 
-  // THIS is ONLY to show the 'buy bitcoins' message
+  // THIS is ONLY to show the 'buy Hushs' message
   // does not has any other function.
 
   var updateHasFunds = function() {
@@ -35,7 +35,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
         if (err && !status) {
           $log.error(err);
           // error updating the wallet. Probably a network error, do not show
-          // the 'buy bitcoins' message.
+          // the 'buy Hushs' message.
 
           $scope.hasFunds = true;
         } else if (status.availableBalanceSat > 0) {
@@ -98,7 +98,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
     if (cashAddress) {
       return 'bch';
     }
-    return 'btc';
+    return 'HUSH';
   };
 
   var updateContactsList = function(cb) {
@@ -222,7 +222,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
     });
   };
 
-  $scope.buyBitcoin = function() {
+  $scope.buyHush = function() {
     $state.go('tabs.home').then(function() {
       $state.go('tabs.buyandsell');
     });

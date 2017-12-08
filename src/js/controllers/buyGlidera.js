@@ -2,7 +2,7 @@
 
 angular.module('copayApp.controllers').controller('buyGlideraController', function($scope, $log, $state, $timeout, $ionicHistory, $ionicConfig, lodash, glideraService, popupService, profileService, ongoingProcess, walletService, platformInfo, txFormatService) {
 
-  var coin = 'btc';
+  var coin = 'HUSH';
   var amount;
   var currency;
 
@@ -26,7 +26,7 @@ angular.module('copayApp.controllers').controller('buyGlideraController', functi
 
   var statusChangeHandler = function (processName, showName, isOn) {
     $log.debug('statusChangeHandler: ', processName, showName, isOn);
-    if ( processName == 'buyingBitcoin' && !isOn) {
+    if ( processName == 'buyingHush' && !isOn) {
       $scope.sendStatus = 'success';
       $timeout(function() {
         $scope.$digest();
@@ -71,7 +71,7 @@ angular.module('copayApp.controllers').controller('buyGlideraController', functi
   });
 
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
-    $scope.isFiat = data.stateParams.currency != 'BTC' ? true : false;
+    $scope.isFiat = data.stateParams.currency != 'HUSH' ? true : false;
     amount = data.stateParams.amount;
     currency = data.stateParams.currency;
 
@@ -111,28 +111,28 @@ angular.module('copayApp.controllers').controller('buyGlideraController', functi
   };
 
   $scope.buyConfirm = function() {
-    var message = 'Buy bitcoin for ' + amount + ' ' + currency;
+    var message = 'Buy Hush for ' + amount + ' ' + currency;
     var okText = 'Confirm';
     var cancelText = 'Cancel';
     popupService.showConfirm(null, message, okText, cancelText, function(ok) {
       if (!ok) return;
-      ongoingProcess.set('buyingBitcoin', true, statusChangeHandler);
+      ongoingProcess.set('buyingHush', true, statusChangeHandler);
       glideraService.get2faCode($scope.token, function(err, tfa) {
         if (err) {
-          ongoingProcess.set('buyingBitcoin', false, statusChangeHandler);
+          ongoingProcess.set('buyingHush', false, statusChangeHandler);
           showError(err);
           return;
         }
         ask2FaCode(tfa.mode, function(twoFaCode) {
           if (tfa.mode != 'NONE' && lodash.isEmpty(twoFaCode)) {
-            ongoingProcess.set('buyingBitcoin', false, statusChangeHandler);
+            ongoingProcess.set('buyingHush', false, statusChangeHandler);
             showError('No code entered');
             return;
           }
 
           walletService.getAddress($scope.wallet, false, function(err, walletAddr) {
             if (err) {
-              ongoingProcess.set('buyingBitcoin', false, statusChangeHandler);
+              ongoingProcess.set('buyingHush', false, statusChangeHandler);
               showError(err);
               return;
             }
@@ -144,7 +144,7 @@ angular.module('copayApp.controllers').controller('buyGlideraController', functi
               ip: null
             };
             glideraService.buy($scope.token, twoFaCode, data, function(err, data) {
-              ongoingProcess.set('buyingBitcoin', false, statusChangeHandler);
+              ongoingProcess.set('buyingHush', false, statusChangeHandler);
               if (err) return showError(err);
               $log.info(data);
             });

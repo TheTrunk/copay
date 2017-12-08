@@ -129,7 +129,7 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
     _getNetAmount(amount, function(err, reducedAmount) {
       if (err) return cb(err);
 
-      // Check if transaction has enough funds to transfer bitcoin from Coinbase to Copay
+      // Check if transaction has enough funds to transfer Hush from Coinbase to Copay
       if (reducedAmount < 0) {
         return cb('Not enough funds for fee');
       }
@@ -187,11 +187,11 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
   var _getNetAmount = function(amount, cb) {
     // Fee Normal for a single transaction (450 bytes)
     var txNormalFeeKB = 450 / 1000;
-    feeService.getFeeRate('btc', 'livenet', 'normal', function(err, feePerKb) {
+    feeService.getFeeRate('HUSH', 'livenet', 'normal', function(err, feePerKb) {
       if (err) return cb('Could not get fee rate');
-      var feeBTC = (feePerKb * txNormalFeeKB / 100000000).toFixed(8);
+      var feeHUSH = (feePerKb * txNormalFeeKB / 100000000).toFixed(8);
 
-      return cb(null, amount - feeBTC, feeBTC);
+      return cb(null, amount - feeHUSH, feeHUSH);
     });
   };
 
@@ -226,12 +226,12 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
       if (err) return cb(err);
       var data = a.data;
       for (var i = 0; i < data.length; i++) {
-        if (data[i].primary && data[i].type == 'wallet' && data[i].currency && data[i].currency.code == 'BTC') {
+        if (data[i].primary && data[i].type == 'wallet' && data[i].currency && data[i].currency.code == 'HUSH') {
           return cb(null, data[i].id);
         }
       }
       root.logout(function() {});
-      return cb('Your primary account should be a BTC WALLET. Set your wallet account as primary and try again');
+      return cb('Your primary account should be a HUSH WALLET. Set your wallet account as primary and try again');
     });
   };
 
@@ -715,7 +715,7 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
   var _sendToWallet = function(tx, accessToken, accountId, coinbasePendingTransactions) {
     if (!tx) return;
     var desc = appConfigService.nameCase + ' Wallet';
-    _getNetAmount(tx.amount.amount, function(err, amountBTC, feeBTC) {
+    _getNetAmount(tx.amount.amount, function(err, amountHUSH, feeHUSH) {
       if (err) {
         _savePendingTransaction(tx, {
           status: 'error',
@@ -729,10 +729,10 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
 
       var data = {
         to: tx.toAddr,
-        amount: amountBTC,
+        amount: amountHUSH,
         currency: tx.amount.currency,
         description: desc,
-        fee: feeBTC
+        fee: feeHUSH
       };
       root.sendTo(accessToken, accountId, data, function(err, res) {
         if (err) {

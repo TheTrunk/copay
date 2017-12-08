@@ -1462,7 +1462,7 @@ angular.module('copayApp.services').factory('bitpayCardService', function($log, 
     9701: 'default',
     9702: 'default',
     9950: 'default',
-    'bp001': 'bitcoin-topup',
+    'bp001': 'Hush-topup',
     'bp002': 'default'
   };
 

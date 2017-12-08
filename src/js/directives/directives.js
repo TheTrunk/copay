@@ -5,11 +5,11 @@ angular.module('copayApp.directives')
       return {
         require: 'ngModel',
         link: function(scope, elem, attrs, ctrl) {
-          // Bitcoin address
+          // Hush address
           var URI = bitcore.URI;
           var Address = bitcore.Address
 
-          // Bitcoin Cash address
+          // Hush Cash address
           var URICash = bitcoreCash.URI;
           var AddressCash = bitcoreCash.Address
 
@@ -23,7 +23,7 @@ angular.module('copayApp.directives')
 
             // Bip21 uri
             var uri, isAddressValidLivenet, isAddressValidTestnet;
-            if (/^bitcoin:/.test(value)) {
+            if (/^Hush:/.test(value)) {
               var isUriValid = URI.isValid(value);
               if (isUriValid) {
                 uri = new URI(value);
@@ -32,7 +32,7 @@ angular.module('copayApp.directives')
               }
               ctrl.$setValidity('validAddress', isUriValid && (isAddressValidLivenet || isAddressValidTestnet));
               return value;
-            } else if (/^bitcoincash:/.test(value)) {
+            } else if (/^Hushcash:/.test(value)) {
               var isUriValid = URICash.isValid(value);
               if (isUriValid) {
                 uri = new URICash(value);
@@ -47,7 +47,7 @@ angular.module('copayApp.directives')
               return;
             }
 
-            // Regular Address: try Bitcoin and Bitcoin Cash
+            // Regular Address: try Hush and Hush Cash
             var regularAddressLivenet = Address.isValid(value, 'livenet');
             var regularAddressTestnet = Address.isValid(value, 'testnet');
             var regularAddressCashLivenet = AddressCash.isValid(value, 'livenet');

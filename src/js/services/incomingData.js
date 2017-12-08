@@ -69,11 +69,11 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
       }, 100);
     }
     // data extensions for Payment Protocol with non-backwards-compatible request
-    if ((/^bitcoin(cash)?:\?r=[\w+]/).exec(data)) {
-      var coin = 'btc';
-      if (data.indexOf('bitcoincash') === 0) coin = 'bch';
+    if ((/^Hush(cash)?:\?r=[\w+]/).exec(data)) {
+      var coin = 'HUSH';
+      if (data.indexOf('Hushcash') === 0) coin = 'bch';
 
-      data = decodeURIComponent(data.replace(/bitcoin(cash)?:\?r=/, ''));
+      data = decodeURIComponent(data.replace(/Hush(cash)?:\?r=/, ''));
 
       payproService.getPayProDetails(data, function(err, details) {
         if (err) {
@@ -86,9 +86,9 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
 
     data = sanitizeUri(data);
 
-    // Bitcoin  URL
+    // Hush  URL
     if (bitcore.URI.isValid(data)) {
-        var coin = 'btc';
+        var coin = 'HUSH';
         var parsed = new bitcore.URI(data);
 
         var addr = parsed.address ? parsed.address.toString() : '';
@@ -133,11 +133,11 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
         }
         return true;
 
-    // Cash URI with bitcoin core address version number?
-    } else if (bitcore.URI.isValid(data.replace(/^bitcoincash:/,'bitcoin:'))) {
-        $log.debug('Handling bitcoincash URI with legacy address');
+    // Cash URI with Hush core address version number?
+    } else if (bitcore.URI.isValid(data.replace(/^Hushcash:/,'Hush:'))) {
+        $log.debug('Handling Hushcash URI with legacy address');
         var coin = 'bch';
-        var parsed = new bitcore.URI(data.replace(/^bitcoincash:/,'bitcoin:'));
+        var parsed = new bitcore.URI(data.replace(/^Hushcash:/,'Hush:'));
 
         var oldAddr = parsed.address ? parsed.address.toString() : '';
         if (!oldAddr) return false;
@@ -150,8 +150,8 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
         // Translate address
         $log.debug('address transalated to:' + addr);
         popupService.showConfirm(
-          gettextCatalog.getString('Bitcoin cash Payment'),
-          gettextCatalog.getString('Payment address was translated to new Bitcoin Cash address format: ' + addr),
+          gettextCatalog.getString('Hush cash Payment'),
+          gettextCatalog.getString('Payment address was translated to new Hush Cash address format: ' + addr),
           gettextCatalog.getString('OK'),
           gettextCatalog.getString('Cancel'),
           function(ret) {
@@ -196,7 +196,7 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
       if ($state.includes('tabs.scan')) {
         root.showMenu({
           data: data,
-          type: 'bitcoinAddress'
+          type: 'HushAddress'
         });
       } else {
         goToAmountPage(data);
@@ -205,7 +205,7 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
       if ($state.includes('tabs.scan')) {
         root.showMenu({
           data: data,
-          type: 'bitcoinAddress',
+          type: 'HushAddress',
           coin: 'bch',
         });
       } else {

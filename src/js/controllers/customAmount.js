@@ -40,21 +40,21 @@ angular.module('copayApp.controllers').controller('customAmountController', func
         data.stateParams.amount,
         data.stateParams.currency);
 
-      // Amount in USD or BTC
+      // Amount in USD or HUSH
       var amount = parsedAmount.amount;
       var currency = parsedAmount.currency;
       $scope.amountUnitStr = parsedAmount.amountUnitStr;
 
-      if (currency != 'BTC' && currency != 'BCH') {
-        // Convert to BTC or BCH
+      if (currency != 'HUSH' && currency != 'BCH') {
+        // Convert to HUSH or BCH
         var config = configService.getSync().wallet.settings;
         var amountUnit = txFormatService.satToUnit(parsedAmount.amountSat);
-        var btcParsedAmount = txFormatService.parseAmount($scope.wallet.coin, amountUnit, $scope.wallet.coin);
+        var HUSHParsedAmount = txFormatService.parseAmount($scope.wallet.coin, amountUnit, $scope.wallet.coin);
 
-        $scope.amountBtc = btcParsedAmount.amount;
-        $scope.altAmountStr = btcParsedAmount.amountUnitStr;
+        $scope.amountHUSH = HUSHParsedAmount.amount;
+        $scope.altAmountStr = HUSHParsedAmount.amountUnitStr;
       } else {
-        $scope.amountBtc = amount; // BTC or BCH
+        $scope.amountHUSH = amount; // HUSH or BCH
         $scope.altAmountStr = txFormatService.formatAlternativeStr($scope.wallet.coin, parsedAmount.amountSat);
       }
     });
@@ -69,16 +69,16 @@ angular.module('copayApp.controllers').controller('customAmountController', func
 
   $scope.shareAddress = function() {
     if (!platformInfo.isCordova) return;
-    var protocol = 'bitcoin';
+    var protocol = 'Hush';
     if ($scope.wallet.coin == 'bch') protocol += 'cash';
-    var data = protocol + ':' + $scope.address + '?amount=' + $scope.amountBtc;
+    var data = protocol + ':' + $scope.address + '?amount=' + $scope.amountHUSH;
     window.plugins.socialsharing.share(data, null, null, null);
   }
 
   $scope.copyToClipboard = function() {
-    var protocol = 'bitcoin';
+    var protocol = 'Hush';
     if ($scope.wallet.coin == 'bch') protocol += 'cash';
-    return protocol + ':' + $scope.address + '?amount=' + $scope.amountBtc;
+    return protocol + ':' + $scope.address + '?amount=' + $scope.amountHUSH;
   };
 
 });

@@ -15,7 +15,7 @@ angular.module('copayApp.controllers').controller('addressbookViewController', f
     if (cashAddress) {
       coin = 'bch';
     } else {
-      coin = 'btc';
+      coin = 'HUSH';
     }
   });
 

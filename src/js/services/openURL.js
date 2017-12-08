@@ -57,10 +57,10 @@ angular.module('copayApp.services').factory('openURLService', function($rootScop
 
       // This event is sent to an existent instance of Copay (only for standalone apps)
       gui.App.on('open', function(pathData) {
-        if (pathData.indexOf(/^bitcoin(cash)?:/) != -1) {
-          $log.debug('Bitcoin URL found');
+        if (pathData.indexOf(/^Hush(cash)?:/) != -1) {
+          $log.debug('Hush URL found');
           handleOpenURL({
-            url: pathData.substring(pathData.indexOf(/^bitcoin(cash)?:/))
+            url: pathData.substring(pathData.indexOf(/^Hush(cash)?:/))
           });
         } else if (pathData.indexOf(appConfigService.name + '://') != -1) {
           $log.debug(appConfigService.name + ' URL found');
@@ -83,8 +83,8 @@ angular.module('copayApp.services').factory('openURLService', function($rootScop
 
       if (navigator.registerProtocolHandler) {
         $log.debug('Registering Browser handlers base:' + base);
-        navigator.registerProtocolHandler('bitcoin', url, 'Copay Bitcoin Handler');
-        navigator.registerProtocolHandler('web+bitcoincash', url, 'Copay Bitcoin Cash Handler');
+        navigator.registerProtocolHandler('Hush', url, 'Copay Hush Handler');
+        navigator.registerProtocolHandler('web+Hushcash', url, 'Copay Hush Cash Handler');
         navigator.registerProtocolHandler('web+copay', url, 'Copay Wallet Handler');
         navigator.registerProtocolHandler('web+bitpay', url, 'BitPay Wallet Handler');
       }

@@ -6,7 +6,7 @@ angular.module('copayApp.controllers').controller('tabSettingsController', funct
     $scope.currentLanguageName = uxLanguage.getCurrentLanguageName();
     $scope.feeOpts = feeService.feeOpts;
     $scope.currentFeeLevel = feeService.getCurrentFeeLevel();
-    $scope.walletsBtc = profileService.getWallets({ coin: 'btc' });
+    $scope.walletsHUSH = profileService.getWallets({ coin: 'HUSH' });
     $scope.walletsBch = profileService.getWallets({ coin: 'bch' });
     $scope.buyAndSellServices = buyAndSellService.getLinked();
 

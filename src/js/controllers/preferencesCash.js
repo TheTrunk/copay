@@ -33,8 +33,8 @@ angular.module('copayApp.controllers').controller('preferencesCashController',
     }
 
     var updateAllWallets = function() {
-      var walletsBTC = profileService.getWallets({
-        coin: 'btc',
+      var walletsHUSH = profileService.getWallets({
+        coin: 'HUSH',
         onlyComplete: true,
         network: 'livenet'
       });
@@ -46,14 +46,14 @@ angular.module('copayApp.controllers').controller('preferencesCashController',
       });
       var xPubKeyIndex = lodash.indexBy(walletsBCH, "credentials.xPubKey");
 
-      walletsBTC = lodash.filter(walletsBTC, function(w) {
+      walletsHUSH = lodash.filter(walletsHUSH, function(w) {
         return !xPubKeyIndex[w.credentials.xPubKey];
       });
 
       var availableWallets = [];
       var nonEligibleWallets = [];
 
-      lodash.each(walletsBTC, function(w) {
+      lodash.each(walletsHUSH, function(w) {
         if (w.credentials.derivationStrategy != 'BIP44') {
           w.excludeReason = gettextCatalog.getString('Non BIP44 wallet');
           nonEligibleWallets.push(w);

@@ -2,7 +2,7 @@
 
 angular.module('copayApp.controllers').controller('buyAmazonController', function($scope, $log, $state, $timeout, $filter, $ionicHistory, $ionicConfig, lodash, amazonService, popupService, profileService, ongoingProcess, configService, walletService, payproService, bwcError, externalLinkService, platformInfo, gettextCatalog, txFormatService, emailService) {
 
-  var coin = 'btc';
+  var coin = 'HUSH';
   var amount;
   var currency;
   var createdTx;
@@ -139,8 +139,8 @@ angular.module('copayApp.controllers').controller('buyAmazonController', functio
     }
 
     var outputs = [];
-    var toAddress = invoice.bitcoinAddress;
-    var amountSat = parseInt((invoice.btcDue * 100000000).toFixed(0)); // BTC to Satoshi
+    var toAddress = invoice.HushAddress;
+    var amountSat = parseInt((invoice.HUSHDue * 100000000).toFixed(0)); // HUSH to Satoshi
 
     outputs.push({
       'toAddress': toAddress,
@@ -235,8 +235,8 @@ angular.module('copayApp.controllers').controller('buyAmazonController', functio
         return;
       }
       // Sometimes API does not return this element;
-      invoice['buyerPaidBtcMinerFee'] = invoice.buyerPaidBtcMinerFee || 0;
-      var invoiceFeeSat = (invoice.buyerPaidBtcMinerFee * 100000000).toFixed();
+      invoice['buyerPaidHUSHMinerFee'] = invoice.buyerPaidHUSHMinerFee || 0;
+      var invoiceFeeSat = (invoice.buyerPaidHUSHMinerFee * 100000000).toFixed();
 
       message = gettextCatalog.getString("{{amountStr}} for Amazon.com Gift Card", {
         amountStr: $scope.amountUnitStr
